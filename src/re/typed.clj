@@ -55,9 +55,9 @@
 
 
 (ann groups
-     (Fn [Matcher -> (IPersistentVector String)]
+     (Fn [Matcher -> (IPersistentVector (Option String))]
          [Matcher (U (Value 0) (Value 1)) ->
-          (IPersistentVector String)]))
+          (IPersistentVector (Option String))]))
 (tc-ignore
  (defn groups
    ([^Matcher m min]
@@ -72,7 +72,7 @@
 
 
 (ann all
-     [Matcher -> (IPersistentVector String)])
+     [Matcher -> (IPersistentVector (Option String))])
 (defn all [^Matcher m]
   (groups m 0))
 
