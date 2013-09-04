@@ -58,17 +58,16 @@
      (Fn [Matcher -> (IPersistentVector (Option String))]
          [Matcher (U (Value 0) (Value 1)) ->
           (IPersistentVector (Option String))]))
-(tc-ignore
- (defn groups
-   ([^Matcher m min]
-      (let [gc (.groupCount m)]
-        (loop> [[ret :- (IPersistentVector String)] []
-                [c :- AnyInteger] min]
-               (if (<= c gc)
-                 (recur (conj ret (.group m c)) (inc c))
-                 ret))))
-   ([^Matcher m]
-      (groups m 1))))
+(defn ^:no-check groups  
+  ([^Matcher m min]
+     (let [gc (.groupCount m)]
+       (loop> [ret :- (IPersistentVector String) [],
+               c :- AnyInteger min]
+              (if (<= c gc)
+                (recur (conj ret (.group m c)) (inc c))
+                ret))))
+  ([^Matcher m]
+     (groups m 1)))
 
 
 (ann all

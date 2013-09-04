@@ -22,6 +22,13 @@ a massive type union explosion.
 `re/find`, `re/matches` and `re/seq` correspond to `re-find`, `re-matches` and `re-seq` from core,
 but each takes an additional first argument to parameterize how to return the Matchers result.
 
+## Changes
+
+### 0.1.1 ###
+
+ * Updates to core.typed 0.2.2
+ * no longer a snapshot release
+
 ## License
 
 Copyright © 2013 Andrew Brehaut
