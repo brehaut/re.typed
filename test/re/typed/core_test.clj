@@ -1,6 +1,6 @@
 (ns re.typed.core-test
   (:use clojure.test
-        re.typed.core))
+        re.typed))
 
 (deftest a-test
   (testing "FIXME, I fail."
