@@ -24,6 +24,10 @@ but each takes an additional first argument to parameterize how to return the Ma
 
 ## Changes
 
+### 0.1.3 ###
+
+ * Update some old type syntax
+
 ### 0.1.2 ###
 
  * Update to core.typed 0.2.53
