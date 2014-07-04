@@ -6,7 +6,7 @@
            (clojure.lang IPersistentVector)))
 
 (t/ann matches
-     (All [a] [[Matcher -> a] Pattern String -> (t/Option a)]))
+     (t/All [a] [[Matcher -> a] Pattern String -> (t/Option a)]))
 (defn matches
   "equivalent to re-matches but parameterised over how to handle matches"
   [handle-match ^Pattern re s]
@@ -15,9 +15,9 @@
       (handle-match m))))
 
 (t/ann find
-     (All [a]
-          (Fn [[Matcher -> a] Pattern String -> (t/Option a)]
-              [[Matcher -> a] Matcher -> (t/Option a)])))
+     (t/All [a]
+          (t/IFn [[Matcher -> a] Pattern String -> (t/Option a)]
+                 [[Matcher -> a] Matcher -> (t/Option a)])))
 
 (defn find
   "equivalent to re-find but parameterised over how to handle matches"
@@ -29,7 +29,7 @@
 
 
 (t/ann seq
-     (All [a]
+     (t/All [a]
           [[Matcher -> a] Pattern String -> (t/Seq a)]))
 (defn seq
   "Equivalent to re-seq but paraterised over how to handle matches"
@@ -53,9 +53,9 @@
 
 
 (t/ann groups
-     (Fn [Matcher -> (t/Vec (t/Option String))]
-         [Matcher (U (Value 0) (Value 1)) ->
-          (t/Vec (t/Option String))]))
+       (t/IFn [Matcher -> (t/Vec (t/Option String))]
+              [Matcher (U (Value 0) (Value 1)) ->
+               (t/Vec (t/Option String))]))
 (defn ^:no-check groups  
   ([^Matcher m min]
      (let [gc (.groupCount m)]
