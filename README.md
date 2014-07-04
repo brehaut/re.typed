@@ -24,7 +24,7 @@ but each takes an additional first argument to parameterize how to return the Ma
 
 ## Changes
 
-### 0.1.3 ###
+### 0.1.{3,4} ###
 
  * Update some old type syntax
 

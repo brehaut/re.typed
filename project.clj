@@ -1,4 +1,4 @@
-(defproject com.ambrosebs/re.typed "0.1.3"
+(defproject com.ambrosebs/re.typed "0.1.4"
   :description "regular expressions without a big fat union."
   :url "http://github.com/brehaut/re.typed/"
   :license {:name "Eclipse Public License"

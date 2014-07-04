@@ -54,7 +54,7 @@
 
 (t/ann groups
        (t/IFn [Matcher -> (t/Vec (t/Option String))]
-              [Matcher (U (Value 0) (Value 1)) ->
+              [Matcher (t/U (t/Value 0) (t/Value 1)) ->
                (t/Vec (t/Option String))]))
 (defn ^:no-check groups  
   ([^Matcher m min]
