@@ -39,6 +39,6 @@ but each takes an additional first argument to parameterize how to return the Ma
 
 ## License
 
-Copyright © 2013 Andrew Brehaut
+Copyright © 2013 Andrew Brehaut, Ambrose Bonnaire-Sergeant
 
 Distributed under the Eclipse Public License, the same as Clojure.
